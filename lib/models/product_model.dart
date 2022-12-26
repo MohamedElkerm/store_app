@@ -1,20 +1,22 @@
 class ProductModel {
-  final int id;
-  final String title;
-  final double price;
-  final String description;
-  final String category;
-  final String image;
+   var id;
+  var title;
+  var  price;
+  var description;
+  var category;
+  var image;
   final RatingModel rating;
 
   ProductModel(
-      {required this.id,
+      {
+        required this.id,
       required this.title,
       required this.price,
       required this.description,
       required this.category,
       required this.image,
-      required this.rating});
+      required this.rating
+      });
 
   factory ProductModel.fromJson(json) {
     return ProductModel(
@@ -24,13 +26,14 @@ class ProductModel {
         description: json['description'],
         category: json['category'],
         image: json['image'],
-        rating: RatingModel.fromJson(json['rating']));
+        rating: RatingModel.fromJson(json['rating'])
+    );
   }
 }
 
 class RatingModel {
-  final double rate;
-  final int count;
+  var rate;
+  var count;
 
   RatingModel({required this.rate, required this.count});
 
