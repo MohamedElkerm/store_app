@@ -5,7 +5,7 @@ import 'package:store_app/modules/update_product_page.dart';
 Widget productCard(ProductModel productModel,context){
   return GestureDetector(
     onTap: (){
-      Navigator.pushNamed(context, UpdateProductPage.id);
+      Navigator.pushNamed(context, UpdateProductPage.id,arguments: productModel);
     },
     child: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),

@@ -8,16 +8,17 @@ class StoreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       initialRoute: HomePage.id,
       routes: {
         HomePage.id : (context)=>const HomePage(),
-        UpdateProductPage.id : (context)=>const UpdateProductPage(),
+        UpdateProductPage.id : (context)=> UpdateProductPage(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xFFFFFFFF),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
     );
   }
